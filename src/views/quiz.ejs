@@ -8,7 +8,12 @@
 
   <h2 class="small text-end">Par <%= quiz.author.firstname %> <%= quiz.author.lastname %></h2>
 
-  <h2 class="small text-end">Date de création : <%= quiz.created_at %></h2>
+  <h2 class="small text-end">Date de création : <%= new Date(quiz.created_at).toLocaleDateString('fr-FR', { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  }) %></h2>
 
   <h3>Thèmes</h3>
   <ul class="mb-4 p-0">

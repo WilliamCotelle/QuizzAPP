@@ -4,6 +4,7 @@ const mainController = {
   renderHomePage: async (req, res) => {
     try {
       const quizzes = await Quiz.findAll({
+       order: [['title', 'ASC']],
         include: [
           {
             model: User,
@@ -13,11 +14,12 @@ const mainController = {
             model: Tag,
             as: "tags"
           }
-        ]
+        ],
+        
       });
       res.render("home", { quizzes });
     } catch (error) {
-      res.status(500).send('Erreur serveur');
+      res.render('500');
       console.log(error);
     }
   },
@@ -48,10 +50,13 @@ const mainController = {
           
         ]
       });
+      if(!quiz){
+        res.render("404")
+      }
       res.render("quiz", { quiz });
       
     } catch (error) {
-      res.status(500).send('Erreur serveur');
+      res.render('500');      
       console.log(error);
     }
 
@@ -67,10 +72,14 @@ const mainController = {
       });
       res.render("tags", {tags})
     } catch (error) {
-      res.status(500).send('Erreur serveur');
+      res.render('500');;
       console.log(error);
     }
   }
 };
 
-module.exports = mainController;
+
+
+
+
+module.exports = mainController; 

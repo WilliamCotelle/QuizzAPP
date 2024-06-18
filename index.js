@@ -1,11 +1,13 @@
 // Charger les variables d'environnement
-const dotenv = require("dotenv").config();
+require("dotenv").config();
 console.log('Database URL:', process.env.PG_URL);
 
 
 // Importer les dependances
 const express = require("express");
 const router = require("./src/router");
+const expressSession = require('express-session')
+
 
 // Création de l'application express
 const app = express();
@@ -22,6 +24,17 @@ app.use(express.urlencoded({ extended: true }));
 
 // On plug le router
 app.use(router);
+
+
+
+app.use(expressSession({
+  resave: false,
+  saveUninitialized: true,
+  secret: "Guess it!",
+  cookie: {
+    secure: false,
+  }
+}));
 
 
 // Lancer l'application
