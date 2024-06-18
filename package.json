@@ -16,7 +16,7 @@
   "author": "oclock.io",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.8",
     "email-validator": "^2.0.4",
     "express": "^4.18.2",

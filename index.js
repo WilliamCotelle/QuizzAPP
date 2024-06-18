@@ -1,6 +1,7 @@
 // Charger les variables d'environnement
-const dotenv = require("dotenv");
-dotenv.config();
+const dotenv = require("dotenv").config();
+console.log('Database URL:', process.env.PG_URL);
+
 
 // Importer les dependances
 const express = require("express");
