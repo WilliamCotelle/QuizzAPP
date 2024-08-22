@@ -2,6 +2,8 @@
 
 Bienvenue sur **QuizzAPP**, une application de quiz interactive conçue pour offrir une expérience ludique et éducative à travers une série de questions à choix multiple.
 
+![Capture d'écran de l'application](../public//public/image/ppProjet.png)
+
 ## Fonctionnalités
 
 - **Quizz dynamiques** : Un large éventail de thèmes de quiz pour tester vos connaissances.
