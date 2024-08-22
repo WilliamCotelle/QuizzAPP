@@ -1,64 +1,33 @@
-# S05 - Atelier O'quiz
+# QuizzAPP
 
-## Prep work 
+Bienvenue sur **QuizzAPP**, une application de quiz interactive conçue pour offrir une expérience ludique et éducative à travers une série de questions à choix multiple.
 
-On installe et on lance le projet en autonomie !
+## Fonctionnalités
 
-<details><summary>
-Tips en cas de difficulté
-</summary>
+- **Quizz dynamiques** : Un large éventail de thèmes de quiz pour tester vos connaissances.
+- **Interface utilisateur intuitive** : Navigation facile et instructions claires pour une expérience fluide.
 
-Au hasard :
-- `npm install`
-- `.env` avec les bonnes valeurs 😉
-- créer l'user et la BDD `oquiz` si ça n'a pas été fait
-- checker les `scripts npm` si besoin
+## Technologies utilisées
 
-</details>
+QuizzAPP est construit avec les technologies suivantes :
 
-## Etape 1 - Home page
+- **JavaScript**
+- **HTML5**
+- **CSS3**
+- **Node.js**
+- **Express**
+- **PostgreSQL**
 
-La `page d'accueil` doit à présent afficher **dynamiquement** les `quiz` avec leur description, ainsi que le nom/prénom de leurs `auteurs` et les `thèmes` associés au quiz.
+## Objectif du projet
 
-## Etape 2 - Page d'un quiz
+QuizzAPP a été développé comme un projet pédagogique dans le cadre de ma formation à l'école O'clock. L'objectif principal était de mettre en pratique les compétences acquises en développement web, notamment en utilisant Node.js et PostgreSQL pour créer une application complète et fonctionnelle.
 
-Une page pour visualiser un `quiz`, avec :
-- ses `thèmes`
-- ses `questions`
-  - la `difficulté` de chaque question
-  - et les `réponses possibles` à chaque question
+## Remerciements
 
-On vous fournit une intégration dans le dossier `integration`.
+Merci à l'équipe pédagogique de l'école O'clock pour leur soutien et à tous les membres de la promotion pour leur collaboration et leurs retours constructifs.
 
-## Etape 3 - Page des thèmes/catégories (tags)
+## Contact
 
-Et pourquoi pas une page qui liste les `thèmes`, et sous chaque thème, un lien vers les `quiz` qui comportent ces thèmes ? 
+William Cotelle - william.cotelle@outlook.fr
 
-On vous fournit une intégration dans le dossier `integration`.
-
-## Etape 4 - Les bonus d'échauffement
-
-Les liens : 
-- ajouter tous les liens qui pourraient manquer ! Il y a surement des endroits de l'application où il serait intéressant pour l'utilisateur de pouvoir cliquer, afin de rendre la navigation plus fluide ! 
-
-Home page :
-- les `quiz` doivent être affichés par ordre alphabétique de leur titre. [CF DOC](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#ordering).
-
-Controllers : 
-- Pensez aux `try/catch` autour des requêtes en base de données, et renvoyer une page d'erreur en cas de problème.
-
-Page non trouvée : 
-- Et la 404 dans tout ça ?
-
-## Etape 5 - Bonus de la mort qui tue
-
-Rajouter les pages des formulaires d'**inscription** et de **connexion**. 
-
-Avec tout ce qui est nécessaire 💪 (par ordre de difficulté): 
-- les vues
-- création de l'utilisateur dans la base de données après soumission du formulaire.
-- conserver le fait que l'utilisateur soit loggé dans la session de l'utilisateur (`express-session`)
-- hashage du mot de passe à l'inscription en utilisant un module npm ! (`bcrypt`)
-
-Et on commence à réfléchir à la journée de demain : 
-- empêcher les utilisateurs non loggés de pouvoir éditer/supprimer les `Levels`
+GitHub: [WilliamCotelle](https://github.com/WilliamCotelle)
